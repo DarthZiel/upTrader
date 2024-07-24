@@ -1,0 +1,137 @@
+[
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 1,
+        "fields": {
+            "title": "Казахская кухня",
+            "parent": null,
+            "slug": "kazakh-cuisine"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 2,
+        "fields": {
+            "title": "Бешбармак",
+            "parent": 1,
+            "slug": "beshbarmak"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 3,
+        "fields": {
+            "title": "Кумыс",
+            "parent": 1,
+            "slug": "kumys"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 4,
+        "fields": {
+            "title": "Грузинская кухня",
+            "parent": null,
+            "slug": "georgian-cuisine"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 5,
+        "fields": {
+            "title": "Хинкали",
+            "parent": 4,
+            "slug": "khinkali"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 6,
+        "fields": {
+            "title": "Сациви",
+            "parent": 4,
+            "slug": "satsivi"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 7,
+        "fields": {
+            "title": "Итальянская кухня",
+            "parent": null,
+            "slug": "italian-cuisine"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 8,
+        "fields": {
+            "title": "Пицца",
+            "parent": 7,
+            "slug": "pizza"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 9,
+        "fields": {
+            "title": "Паста",
+            "parent": 7,
+            "slug": "pasta"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 10,
+        "fields": {
+            "title": "Французская кухня",
+            "parent": null,
+            "slug": "french-cuisine"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 11,
+        "fields": {
+            "title": "Круассан",
+            "parent": 10,
+            "slug": "croissant"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 12,
+        "fields": {
+            "title": "Багет",
+            "parent": 10,
+            "slug": "baguette"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 13,
+        "fields": {
+            "title": "Корейская кухня",
+            "parent": null,
+            "slug": "korean-cuisine"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 14,
+        "fields": {
+            "title": "Кимчи",
+            "parent": 13,
+            "slug": "kimchi"
+        }
+    },
+    {
+        "model": "TreeMenu.treemenu",
+        "pk": 15,
+        "fields": {
+            "title": "Бибимбап",
+            "parent": 13,
+            "slug": "bibimbap"
+        }
+    }
+]
