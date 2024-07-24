@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* CSS для выпадающего меню при наведении */
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        .dropdown-menu a {
+            white-space: nowrap;
+        }
+
+        .nav-item {
+    margin-right: 15px;}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    {% for item in menu_items %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link"  id="navbarDropdown{{ forloop.counter }}" role="button" aria-haspopup="true" aria-expanded="false">
+                                <a href="{% url 'draw' item.slug %}"> {{ item.title }}</a>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown{{ forloop.counter }}">
+                                {% if item.children.all %}
+                                    {% for child in item.children.all %}
+                                        <a class="dropdown-item" href="{% url 'draw' child.slug %}">{{ child.title }}</a>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
